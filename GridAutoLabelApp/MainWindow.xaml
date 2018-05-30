@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:GridAutoLabelApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+  
+  <Window.Resources>
+    <Style TargetType="Label">
+      <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+    </Style>
+  </Window.Resources>
+
+  <Grid IsSharedSizeScope="True">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" SharedSizeGroup="Label"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <local:AutoColumnGrid>
+      <Label Content="abc"/>
+      <TextBox>jfkdls;ajfd</TextBox>
+    </local:AutoColumnGrid>
+    <local:AutoColumnGrid>
+      <Label Content="abc"/>
+      <TextBox>jfkdls;ajfd</TextBox>
+    </local:AutoColumnGrid>
+    <local:AutoColumnGrid>
+      <Label Content="abc"/>
+      <TextBox>jfkdls;ajfd</TextBox>
+    </local:AutoColumnGrid>
+  </Grid>
 </Window>
